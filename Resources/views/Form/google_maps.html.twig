@@ -20,14 +20,11 @@
         {% if include_jquery %}
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
         {% endif %}
+
         {% if include_gmaps_js %}
-        <script type="text/javascript" src="//maps.google.com/maps/api/js?key={{ apiKey }}"></script>
+            <script type="text/javascript" src="//maps.google.com/maps/api/js?key={{ apiKey }}"></script>
         {% endif %}
-        {% javascripts
-            '@OhGoogleMapFormTypeBundle/Resources/public/js/jquery.ohgooglemaps.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        <script type="text/javascript" src="{{ asset('bundles/ohgooglemapformtype/js/jquery.ohgooglemaps.js') }}"></script>
     {% endblock %}
     {% block oh_google_maps_javascript %}
         {% block oh_google_maps_callback %}

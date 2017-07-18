@@ -20,7 +20,7 @@ class GoogleMapType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-    	// Default fields: latitude, longitude
+        // Default fields: latitude, longitude
         $builder
             ->add($options['lat_name'], $options['type'], array_merge($options['options'], $options['lat_options']))
             ->add($options['lng_name'], $options['type'], array_merge($options['options'], $options['lng_options']));
@@ -32,15 +32,15 @@ class GoogleMapType extends AbstractType
 
         // Optional Address field use button
         if(isset($options['addr_use_btn']) && $options['addr_use_btn']) {
-			$builder->add(
-				$options['addr_use_btn']['name'],
-				'button',
-				array_merge(
-					$options['options'],
-					isset($options['addr_use_btn']['options']) ? $options['addr_use_btn']['options'] : []
-				)
-			);
-		}
+            $builder->add(
+                $options['addr_use_btn']['name'],
+                'button',
+                array_merge(
+                    $options['options'],
+                    isset($options['addr_use_btn']['options']) ? $options['addr_use_btn']['options'] : []
+                )
+            );
+        }
     }
 
     /**
@@ -91,9 +91,9 @@ class GoogleMapType extends AbstractType
     }
 
     public function getName()
-	{
-		return 'oh_google_maps';
-	}
+    {
+        return 'oh_google_maps';
+    }
 
     public function getBlockPrefix()
     {
